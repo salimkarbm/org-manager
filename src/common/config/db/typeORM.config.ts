@@ -6,12 +6,12 @@ import { dbConfig } from '../env.config';
 export const datastore: DataSourceOptions = {
   // TypeORM PostgreSQL DB Drivers
   type: dbConfig.DB_DRIVER,
-  host: dbConfig.DB_HOST,
-  port: dbConfig.DB_PORT,
-  username: dbConfig.DB_USERNAME,
-  password: dbConfig.DB_PASSWORD,
-  database: dbConfig.DB_DATABASE,
-
+  url: dbConfig.DB_URL,
+  //   host: dbConfig.DB_HOST,
+  //   port: dbConfig.DB_PORT,
+  //   username: dbConfig.DB_USERNAME,
+  //   password: dbConfig.DB_PASSWORD,
+  //   database: dbConfig.DB_DATABASE,
   // Synchronize database schema with entities
   synchronize: process.env.NODE_ENV !== 'production' ? true : false,
 

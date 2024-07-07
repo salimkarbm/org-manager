@@ -3,6 +3,7 @@ import { config } from 'dotenv';
 config();
 
 export const dbConfig = {
+  DB_URL: process.env.DB_URL,
   DB_DRIVER: process.env.DB_DRIVER as 'postgres',
   DB_HOST: process.env.DB_HOST,
   DB_PORT: Number(process.env.DB_PORT),
